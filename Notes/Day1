@@ -1,0 +1,37 @@
+history
+
+variables 
+	.flexibale 
+	.comparison 
+	
+es5 
+	.var -
+	.const - block scope, unchange value 
+	.let - block scope
+
+variables data stype 
+	.undifined
+	.object 	
+	.array
+	.number
+	.string 
+	.boolean
+	.NULL 
+
+String  > Number  
+	> NULL
+
+variable in function 
+	.global scope 
+	.local scope 
+=================================================
+Day-2 : 
+falsy vs truthy 
+	.fasly : 0, NaN, false, "", null, undifined 
+	.truthy :
+var object = {
+	name: "meow",
+	age: 20,
+	array: [],
+	func: function() {}
+}
