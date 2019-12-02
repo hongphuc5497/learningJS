@@ -1,16 +1,16 @@
 // !array
 let myArray = new Array
-// console.log(myArray.length)
+console.log(myArray.length)
 
 // !function with agrument 
-// functWithAgrument("string", 20, true, undefined)
+functWithAgrument("string", 20, true, undefined)
 function functWithAgrument() {
   console.log(arguments)
 }
 
 //!function with closure 
-// const globalClosure = 10
-// functWithClosure()
+const globalClosure = 10
+functWithClosure()
 function functWithClosure() {
   let localClosure = 20
   function subFunct() {
@@ -29,19 +29,19 @@ var student2 = {
   name: 'Hoa',
   gender: 'Female'
 }
-// isMale(student1)
-// isMale(student2)
-// isMale("")
-// isMale(undefined)
-// isMale(1)
-// isMale("a")
-// isMale(NaN)
-// isMale()
-// isMale({
-//   name: null,
-//   number: 22, 
-//   gender: 'female'
-// })
+isMale(student1)
+isMale(student2)
+isMale("")
+isMale(undefined)
+isMale(1)
+isMale("a")
+isMale(NaN)
+isMale()
+isMale({
+  name: null,
+  number: 22, 
+  gender: 'female'
+})
 function isMale(params) {
   if (!params || !params.gender || !params.name) {
     return
@@ -55,19 +55,19 @@ function isMale(params) {
 }
 
 //!for loop 
-// var loopArray = [1, 10, 2, 20, 3, 30, 4, 40]
-// const forArray = []
-// for(let i = 0; i < loopArray.length; i++) {
-//   forArray.push(loopArray[i] *= 2)
-//   console.log(i)
-// }
-// console.log(forArray)
+var loopArray = [1, 10, 2, 20, 3, 30, 4, 40]
+const forArray = []
+for(let i = 0; i < loopArray.length; i++) {
+  forArray.push(loopArray[i] *= 2)
+  console.log(i)
+}
+console.log(forArray)
 
 //!forEach loop 
-// var eachArray = [5, 10, 15, 20, 25]
-// eachArray.forEach(function(value, index){
-//   console.log(`index: ${index} value: ${value}`)
-// })
+var eachArray = [5, 10, 15, 20, 25]
+eachArray.forEach(function(value, index){
+  console.log(`index: ${index} value: ${value}`)
+})
 var arrayOfStudents = [
   {
     name: 'Toan',
@@ -130,11 +130,11 @@ arrayOfStudents.forEach(function(value, index) {
   }
 })
 
-// console.log("Weak", arrayOfWeakStudents)
-// console.log("Average", arrayOfAverageStudents)
-// console.log("Normal", arrayOfNormalStudents)
-// console.log("Good", arrayOfGoodStudents)
-// console.log(arrayOfAverageScore)
+console.log("Weak", arrayOfWeakStudents)
+console.log("Average", arrayOfAverageStudents)
+console.log("Normal", arrayOfNormalStudents)
+console.log("Good", arrayOfGoodStudents)
+console.log(arrayOfAverageScore)
 
 sortAverage(arrayOfAverageScore)
 
