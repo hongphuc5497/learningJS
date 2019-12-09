@@ -67,7 +67,7 @@ let tableHeadTitle =  '<tr>'
 viewDataButton.addEventListener("click", function() {
   let tableStudent = document.getElementById('tableStudent');
 
-  if (tableStudent.style.display === 'none') {
+  if (tableStudent.style.display == 'none') {
     tableStudent.style.display = 'table';
     viewDataButton.innerHTML = 'Hide Me';
 
@@ -75,7 +75,7 @@ viewDataButton.addEventListener("click", function() {
     addDataStudent.innerHTML = htmlAddRow;
   } else {
     tableStudent.style.display = 'none';
-    viewDataButton.innerHTML = 'Click Me'
+    viewDataButton.innerHTML = 'Click Me';
   }
 })
 
