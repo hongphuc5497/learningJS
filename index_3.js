@@ -1,7 +1,4 @@
-
 // !DOM
-
-
 var arrayOfStudents = [
   {
     name: 'Toan',
@@ -34,28 +31,52 @@ var arrayOfStudents = [
     English: 8
   }
 ]
-var arrayOfAvg = []
 
-arrayOfStudents.forEach((value) => {
-  let avg = (value.math + value.English) / 2;
-  arrayOfAvg.push(avg);
-})
-
-const tableRow = 
-  '<tr>' 
-    + '<td> </td>'
-    + '<td> </td>'
-    + '<td> </td>'
-    + '<td> </td>'
-    + '<td> </td>'
-    + '<td> </td>'
-+ '</tr>'     
-
-const tableBody = document.getElementsByTagName("tbody")
-
-
-for(let i = 0; i < arrayOfStudents.length; i++) {
-  tableBody[i].appendChild(tableRow);
+function calculateAvg(num1, num2) {
+  return (num1 +  num2) / 2;
 }
 
-console.log(tableBody)
+let htmlAddRow = '';
+
+arrayOfStudents.forEach((value, index) => {
+  let htmlEachStudent = `<tr>`
+                        + `<td>${index}</td>`
+                        + `<td>${value.name}</td>`
+                        + `<td>${value.gender}</td>`
+                        + `<td>${value.math}</td>`
+                        + `<td>${value.English}</td>`
+                        + `<td>${calculateAvg(value.math,value.English)}</td>`
+                      + `</tr>`;
+
+  htmlAddRow += htmlEachStudent;
+})
+
+const viewDataButton = document.getElementById('viewDataButton');
+const addDataStudent = document.getElementById('addDataStudent');
+const tableHead      = document.getElementById('tableHead');
+
+let tableHeadTitle =  '<tr>'
+                      + '<td>ORDER</td>'
+                      + '<td>NAME</td>'
+                      + '<td>GENDER</td>'
+                      + '<td>MATH</td>'
+                      + '<td>ENGLISH</td>'
+                      + '<td>AVG</td>'
+                    + '</tr>';
+
+viewDataButton.addEventListener("click", function() {
+  let tableStudent = document.getElementById('tableStudent');
+
+  if (tableStudent.style.display === 'none') {
+    tableStudent.style.display = 'table';
+    viewDataButton.innerHTML = 'Hide Me';
+
+    tableHead.innerHTML = tableHeadTitle;
+    addDataStudent.innerHTML = htmlAddRow;
+  } else {
+    tableStudent.style.display = 'none';
+    viewDataButton.innerHTML = 'Click Me'
+  }
+})
+
+console.log(tableStudent);
