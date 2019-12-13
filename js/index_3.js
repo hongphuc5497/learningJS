@@ -82,3 +82,15 @@ viewDataButton.addEventListener("click", function() {
   }
 })
 
+//! create scrollling navbar 
+const navbar = document.getElementById("navigation");
+
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    navbar.classList.add('fixed-navbar');
+  } else {
+    navbar.classList.remove('fixed-navbar');
+  }
+})
+
+//! make anchor tag 

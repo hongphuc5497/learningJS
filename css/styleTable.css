@@ -1,9 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+
+/* navbar  */
+.fixed-navbar {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  font-size: 30px !important;
+  padding: 10px;
+  background-color: #e67e22;
+}
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  background-color: #e67e22;
+  margin: auto;
+  padding: 0px;
+  justify-content: space-around;
+  text-transform: capitalize;
+  font-size: 23px;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+/* section-1 */
 h1 {
   text-align: center;
   font-size: 2em;
   color: #d35400;
 }
-
 #viewDataButton {
   color: #e67e22;
   font-size: 1em;
@@ -12,7 +43,6 @@ h1 {
   margin-left: 20px;
   margin-bottom: 30px;
 }
-
 #tableStudent {
   margin: auto;
   border: 1px solid #f39c12;
@@ -20,20 +50,28 @@ h1 {
   text-align: center; 
   font-size: 1.7em;
 }
-
 .non-active {
   display: none !important;
 }
-
 .active {
   display: table !important;
 }
-
 thead {
   color: #e67e22;
 }
-
 td {
   padding: 8px;
   border: 1px solid #f39c12;
+}
+
+/* section-2 */
+#contact {
+  font-size: 10px;
+  background-color: #ffeaa7;
+}
+
+/* section-3  */
+#about-us {
+  font-size: 10px;
+  background-color: #fab1a0
 }
