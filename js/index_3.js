@@ -1,4 +1,4 @@
-// !DOM
+//! create hide/show table button 
 var arrayOfStudents = [
   {
     name: 'Toan',
@@ -53,7 +53,7 @@ arrayOfStudents.forEach((value, index) => {
 
 const viewDataButton = document.getElementById('viewDataButton');
 const addDataStudent = document.getElementById('addDataStudent');
-const tableHead      = document.getElementById('tableHead');
+const tableHead = document.getElementById('tableHead');
 
 let tableHeadTitle =  '<tr>'
                       + '<td>ORDER</td>'
@@ -67,16 +67,18 @@ let tableHeadTitle =  '<tr>'
 viewDataButton.addEventListener("click", function() {
   let tableStudent = document.getElementById('tableStudent');
 
-  if (tableStudent.style.display == 'none') {
-    tableStudent.style.display = 'table';
-    viewDataButton.innerHTML = 'Hide Me';
+  if (tableStudent.classList.contains('non-active')) {
+    tableStudent.classList.remove('non-active');
+    tableStudent.classList.add('active');
 
+    viewDataButton.innerHTML = 'Hide Me';
     tableHead.innerHTML = tableHeadTitle;
     addDataStudent.innerHTML = htmlAddRow;
   } else {
-    tableStudent.style.display = 'none';
-    viewDataButton.innerHTML = 'Click Me';
+    tableStudent.classList.remove('active');
+    tableStudent.classList.add('non-active');
+
+    viewDataButton.innerHTML = 'Click me';
   }
 })
 
-console.log(tableStudent);

@@ -17,9 +17,16 @@ h1 {
   margin: auto;
   border: 1px solid #f39c12;
   border-collapse: collapse;
-  display: none;
   text-align: center; 
   font-size: 1.7em;
+}
+
+.non-active {
+  display: none !important;
+}
+
+.active {
+  display: table !important;
 }
 
 thead {
