@@ -93,4 +93,24 @@ window.addEventListener('scroll', () => {
   }
 })
 
-//! make anchor tag 
+//! make anchor tag smooth scrolling 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  console.log(anchor);
+
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    console.log(this);
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+//! get datetime 
+// const printDate = document.getElementById('printDate');
+// const date = new Date();
+// var days = ['chủ nhật','hai','ba','tư','năm','sáu','bảy'];
+// var months = ['một','hai','ba','tư','năm','sáu','bảy','tám','chín','mười','mười một','mười hai'];
+
